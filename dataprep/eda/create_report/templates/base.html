@@ -10,28 +10,28 @@
 
 <body class="bg-container">
   <nav class="navbar-top">
-    <a href="#"><span>{{ context.title }}</span></a>
+    <a><span>{{ context.title }}</span></a>
     {% if context.components.has_overview %}
-    <a href="#overview">Overview</a>
+    <!-- <a href="#overview">Overview</a> -->
     {% endif %}
     <div class="subnav" onclick="hideDropdown(this)">
       {% if context.components.has_variables %}
-      <a href="#variables">Variables ≡</a>
+      <!-- <a href="#variables">Variables ≡</a> -->
       <div class="subcontent">
         {% for var in context.components.variables.keys() %}
-        <a href="#{{ var|e }}">{{ var|e }}</a>
+        <!-- <a href="#{{ var|e }}">{{ var|e }}</a> -->
         {% endfor %}
       </div>
       {% endif %}
     </div>
     {% if context.components.has_interaction %}
-    <a href="#interactions">Interactions</a>
+    <!-- <a href="#interactions">Interactions</a> -->
     {% endif %}
     {% if context.components.has_correlation %}
-    <a href="#correlations">Correlations</a>
+    <!-- <a href="#correlations">Correlations</a> -->
     {% endif %}
     {% if context.components.has_missing %}
-    <a href="#missing-values">Missing Values</a>
+    <!-- <a href="#missing-values">Missing Values</a> -->
     {% endif %}
   </nav>
 
@@ -93,9 +93,9 @@
   {{ context.components.interactions[0] }}
   {% endif %}
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <p>Report generated with <a href="https://dataprep.ai/">DataPrep</a></p>
-  </footer>
+  </footer> -->
 
 </body>
 
